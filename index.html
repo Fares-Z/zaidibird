@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <div class="glass-panel">
+                    <h1 class="title">FLAPPY<br>BIRD</h1>
+                    <p class="subtitle">Prêt à voler ?</p>
+                    <button id="start-btn" class="primary-btn">JOUER</button>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen hidden">
+                <div class="glass-panel">
+                    <h1 class="title">GAME OVER</h1>
+                    <div class="score-board">
+                        <p>SCORE</p>
+                        <span id="final-score">0</span>
+                        <p class="best-score">MEILLEUR: <span id="best-score">0</span></p>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">REJOUER</button>
+                </div>
+            </div>
+
+            <!-- In-game UI -->
+            <div id="hud" class="hidden">
+                <div id="current-score">0</div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
